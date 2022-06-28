@@ -4,7 +4,7 @@
     padding: 0;
     border: none;
 }
-
+/*Man body section*/
 body {
     font-family: "Libre Baskerville", "Open Sans", serif;
     font-weight: 400;
@@ -14,3 +14,48 @@ body {
     min-height: 100%; 
 }
 
+#header {
+    background-color: #2c5530;
+    color: #FFFDFE;
+    max-height: 300px;
+    grid-area: header;
+    text-align: center;
+    padding: 30px;
+}
+
+#footer {
+    background-color: #2c5530;
+    color: #FFFDFE;
+    max-height: 200px;
+    grid-area: footer;
+    text-align: center;
+    padding: 30px;
+}
+
+/*Container holding the quiz game*/
+#quiz_grid {
+    display: grid;
+    grid-area: quiz_grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  
+    grid-template-areas: "header header header"
+                         ". quiz_grid . "
+                         "footer footer footer";
+
+}
+
+#quiz, #quiz_question, #guesses {
+    max-height: 800px;
+    max-width: 1fr;
+    background-color: #f22b29;
+    color: #FFFDFE;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.guess  {
+    display: inline-block;
+    padding: 20px;
+}
