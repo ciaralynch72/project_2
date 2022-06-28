@@ -3,25 +3,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fun quiz to test peoples knowledge of Canada">
+    <meta name="keywords" content="Canada quiz, test your canadian knowledge, Canada">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Oh Canada! </title>
 </head>
 <body>
+    <!-- header -->
+    <div id="header">
+        <header>
+            <h1>Oh Canada!</h1>
+        </header>
+    </div>
+    <!-- quiz container container -->
     <div id="quiz-grid">
-        <div id="start">Click to start!</div>
+        <div id="start"> <button>Click to start!</button> </div>
         <div id="quiz">Think you know Canada, eh? 
             <div id="quiz_question">This will be a question</div>
             <div id="guesses">This will be for guesses</div>
-            <div class="guess" id="A"></div>
-            <div class="guess" id="B"></div>
-            <div class="guess" id="C"></div>
-            <div class="guess" id="D"></div>
-       
+            <div class="guess" id="A"><button>A</button></div>
+            <div class="guess" id="B"><button>B</button></div>
+            <div class="guess" id="C"><button>C</button></div>
+            <div class="guess" id="D"><button>D</button></div>
+
+       <!-- Shows the number question of x questions  -->
         <div id="question_counter"></div>
     </div>
+    <!-- Shows the users current score -->
     <div id="score_counter"></div>
 
     </div>
+    <!-- footer -->
+    <div>
+    <footer>
+       <h2>Rules</h2>
+    </footer>
+</div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
