@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Open+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: "Libre Baskerville", "Open Sans", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #272635;
+    width: 100%;
+    min-height: 100%; 
+}
+

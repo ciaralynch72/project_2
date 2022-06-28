@@ -42,6 +42,8 @@ I have chosen colors that are found all across the Canadian landscape and will r
 
 ![Color chart](docs/readme_images/color_pallette.GIF)
 
+I have chosen Open Sans and Libre Bakersville fonts as similar fonts are used for the offical Canada wordmarks so I feel they will resonate with the site user. 
+
 ## Features ##
 
 ## Credits ##
