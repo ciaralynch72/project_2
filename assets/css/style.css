@@ -72,6 +72,8 @@ body {
 
 
 .guess  {
-    display: inline-block;
+    display: block;
     padding: 20px;
+    margin: 20px;
+    background-color: #0090C1;
 }

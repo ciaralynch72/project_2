@@ -1,6 +1,7 @@
 const startButton = document.getElementById('start');
 const quiz = document.getElementById('quiz');
 const quizQuestion = document.getElementById('quiz_question')
+const nextButton = document.getElementById('next')
 // const quizAnswerGuesses = document.getElementsByClassName('guess');
 const guessA = document.getElementById(A);
 const guessB = document.getElementById(B);
@@ -12,10 +13,10 @@ quiz.style.display = 'none'
 let questions = [
     {
         question: "Canada has many National Parks but which one was it's first?",
-        A: 'Banff National Park, Alberta',
-        B: 'Glacier National Park, British Columbia',
-        C: 'Thousand Islands National Park, Ontario',
-        D: 'Qausuittuq National Park, Nunavat',
+        guessA: 'Banff National Park, Alberta',
+        guessB: 'Glacier National Park, British Columbia',
+        guessC: 'Thousand Islands National Park, Ontario',
+        guessD: 'Qausuittuq National Park, Nunavat',
         correct: 'A'
     }, {
         question: "What is a toque?",
@@ -40,14 +41,23 @@ let currentQuestion = 0;
 function displayQuestion() {
     let q = questions[currentQuestion];
 
-    quizQuestion.innerHTML ="<p>"+ q.questions +"</p>";
-    guessA.innerHTML = q.guessA;
-    guessB.innerHTML = q.guessB;
-    guessC.innerHTML = q.guessC;
-    guessD.innerHTML = q.guessD;
+    quizQuestion.innerHTML ="<p>"+ q.question +"</p>";
+    A.innerHTML = q.guessA;
+    B.innerHTML = q.guessB;
+    C.innerHTML = q.guessC;
+    D.innerHTML = q.guessD;
 }
 
-startButton.addEventListener("click",startQuiz);
-quiz.style.display = 'show'
+startButton.addEventListener("click", beginQuiz);
+quiz.style.display = 'none';
+nextButton.style.display = 'none';
+
+
+function beginQuiz() {
+    start.style.display = "none";
+    quiz.style.display = "block";
+    displayQuestion();
+    nextButton.style.display = 'block';
+}
 
 
