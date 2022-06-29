@@ -2,13 +2,15 @@ const startButton = document.getElementById('start');
 const quiz = document.getElementById('quiz');
 const quizQuestion = document.getElementById('quiz_question')
 const nextButton = document.getElementById('next')
+const score = document.getElementById('score')
+const progress_counter = document.getElementById('progress_counter')
 // const quizAnswerGuesses = document.getElementsByClassName('guess');
 const guessA = document.getElementById(A);
 const guessB = document.getElementById(B);
 const guessC = document.getElementById(C);
 const guessD = document.getElementById(D);
 
-quiz.style.display = 'none'
+
 
 let questions = [
     {
@@ -20,68 +22,60 @@ let questions = [
         correct: 'A'
     }, {
         question: "What is a toque?",
-        A: 'A tool to rake a camp fire ',
-        B: 'A type of traditional chain',
-        C: 'A wooly hat',
-        D: 'None of the above',
+        guessA: 'A tool to rake a camp fire ',
+        guessB: 'A type of traditional chain',
+        guessC: 'A wooly hat',
+        guessD: 'None of the above',
         correct: 'C'
     }, {
         question: "Canada only has one offical bilingual province, which one?",
-        A: 'Ontario',
-        B: 'New Brunswick',
-        C: 'Nova Scotia',
-        D: 'Quebec',
+        guessA: 'Ontario',
+        guessB: 'New Brunswick',
+        guessC: 'Nova Scotia',
+        guessD: 'Quebec',
         correct: 'B'
     }
 ]
 
-const finalQuestion= questions.length - 1;
+const finalQuestion = questions.length - 1;
 let currentQuestion = 0;
 
-
-
+//show the start button only to begin the quiz
 startButton.addEventListener("click", beginQuiz);
+// hide quiz until start button is clicked
 quiz.style.display = 'none';
+//hide the next button until the quiz is started 
 nextButton.style.display = 'none';
 
+
+//display a question after clicking the start button
 function displayQuestion() {
     let q = questions[currentQuestion];
 
-    quizQuestion.innerHTML ="<p>"+ q.question +"</p>";
+    quizQuestion.innerHTML ="<h2>"+ q.question +"</h2>";
     A.innerHTML = q.guessA;
     B.innerHTML = q.guessB;
     C.innerHTML = q.guessC;
     D.innerHTML = q.guessD;
+console.log('do you work too?')
+}
+function progress(){
+    for(qIndex = 0; qIndex <= finalQuestion; qIndex++){
+        progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
+    }
+    console.log('working?')
+}
 
-    if (questions[currentQuestion]++ < finalQuestion) {
-        displayQuestion();
-}
-}
 function beginQuiz() {
     start.style.display = "none";
     quiz.style.display = "block";
     displayQuestion();
+    progress();
+    console.log('do you do anything')
 }
 
+
+
+
 nextButton.style.display = 'block';
-
-
-// function correctAnswer(answer) {
-//     if(answer === questions[currentQuestion].correct) {
-//         answerIsCorrect();
-//         displayQuestion();
-//     }
-//     else {answerIsWrong();
-//     displayQuestion();}
-    
-// }
-
-// function answerIsCorrect () {
-//     document.getElementsByClassName(guess).style.backgroundColor = "#2c553"
-// }
-
-// function answerIsWrong () {
-//     document.getElementById(displayQuestion).style.backgroundColor = "#f22b29"
-// }
-
-// nextButton.addEventListener('click', displayQuestion )
+nextButton.addEventListener('click', progress)
