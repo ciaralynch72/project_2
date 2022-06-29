@@ -38,6 +38,12 @@ let questions = [
 const finalQuestion= questions.length - 1;
 let currentQuestion = 0;
 
+
+
+startButton.addEventListener("click", beginQuiz);
+quiz.style.display = 'none';
+nextButton.style.display = 'none';
+
 function displayQuestion() {
     let q = questions[currentQuestion];
 
@@ -46,18 +52,36 @@ function displayQuestion() {
     B.innerHTML = q.guessB;
     C.innerHTML = q.guessC;
     D.innerHTML = q.guessD;
+
+    if (questions[currentQuestion]++ < finalQuestion) {
+        displayQuestion();
 }
-
-startButton.addEventListener("click", beginQuiz);
-quiz.style.display = 'none';
-nextButton.style.display = 'none';
-
-
+}
 function beginQuiz() {
     start.style.display = "none";
     quiz.style.display = "block";
     displayQuestion();
-    nextButton.style.display = 'block';
 }
 
+nextButton.style.display = 'block';
 
+
+// function correctAnswer(answer) {
+//     if(answer === questions[currentQuestion].correct) {
+//         answerIsCorrect();
+//         displayQuestion();
+//     }
+//     else {answerIsWrong();
+//     displayQuestion();}
+    
+// }
+
+// function answerIsCorrect () {
+//     document.getElementsByClassName(guess).style.backgroundColor = "#2c553"
+// }
+
+// function answerIsWrong () {
+//     document.getElementById(displayQuestion).style.backgroundColor = "#f22b29"
+// }
+
+// nextButton.addEventListener('click', displayQuestion )

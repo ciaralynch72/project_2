@@ -35,14 +35,18 @@ body {
 /*Container holding the quiz game*/
 #quiz_grid {
     display: grid;
-    grid-area: quiz_grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-radius: 20px;
     grid-template-areas: "header header header"
                          ". quiz_grid . "
                          "footer footer footer";
-
 }
+
+#quiz_card {
+    grid-area: quiz_grid;
+    text-align: center;
+}
+
 
 #start, button {
     background-color: #0090C1;
@@ -57,6 +61,11 @@ body {
     align-items: center;
     
     
+}
+
+#start:hover {
+    background-color: #2c5530;
+    cursor: pointer;
 }
 
 #quiz, #quiz_question, #guesses {
@@ -76,4 +85,17 @@ body {
     padding: 20px;
     margin: 20px;
     background-color: #0090C1;
+}
+
+.guess:hover {
+    background-color: #272635;
+    cursor: pointer;
+}
+
+#next {
+    text-align: center;
+}
+#next:hover {
+    background-color: #272635;
+    color: #FFFDFE;
 }
