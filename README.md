@@ -14,11 +14,30 @@ To do this I plan to implement the following features:
 ### External user goals ###
 To be able to play a quiz that will test their knowledge on Canada and to be able to know how well they did and hopefully learn some new facts about Canada
 
-##UX##
+## UX ##
 
 ### Strategy ### 
+This site will be used by those interesed in testing their knowledge on Canada and hopefully learning some new fun and interesting facts as they progress along throught the quiz. 
+
+#### Target Audience ####
+- Anyone aged 8 and up that has an general interest in Canada
+- People looking to expand their knowledge of Canada
+- People who enjoy quizes 
+
+#### Features required ####
+- A start quiz button
+- Quiz questions and possible answers
+- A next/previous and restart quiz button
+- Score tally at the end of the quiz
+
+The website needs to be intuitive and easy to navigate for the user. Users need to get a sense of accomplishment when they finish and know how well they have done. The site is responsive to all many screens so the user can enjoy the quiz anywhere. 
+
 
 ### Scope ###
+To deliver a site to meet user needs I will need to have to following features in place:
+- A home screen with a start button
+- Quiz questions 
+- 
 
 ### Structure ###
 
