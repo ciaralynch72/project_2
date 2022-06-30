@@ -3,7 +3,7 @@ const quiz = document.getElementById('quiz');
 const quizQuestion = document.getElementById('quiz_question')
 const nextButton = document.getElementById('next')
 const score = document.getElementById('score')
-const progress_counter = document.getElementById('progress_counter')
+const prog = document.getElementById('prog')
 // const quizAnswerGuesses = document.getElementsByClassName('guess');
 const guessA = document.getElementById(A);
 const guessB = document.getElementById(B);
@@ -12,14 +12,14 @@ const guessD = document.getElementById(D);
 
 
 
-let questions = [
+const questions = [
     {
         question: "Canada has many National Parks but which one was it's first?",
         guessA: 'Banff National Park, Alberta',
         guessB: 'Glacier National Park, British Columbia',
         guessC: 'Thousand Islands National Park, Ontario',
         guessD: 'Qausuittuq National Park, Nunavat',
-        correct: 'A'
+        correct: 'guessA'
     }, {
         question: "What is a toque?",
         guessA: 'A tool to rake a camp fire ',
@@ -48,6 +48,7 @@ quiz.style.display = 'none';
 nextButton.style.display = 'none';
 
 
+
 //display a question after clicking the start button
 function displayQuestion() {
     let q = questions[currentQuestion];
@@ -57,14 +58,15 @@ function displayQuestion() {
     B.innerHTML = q.guessB;
     C.innerHTML = q.guessC;
     D.innerHTML = q.guessD;
-console.log('do you work too?')
 }
-function progress(){
-    for(qIndex = 0; qIndex <= finalQuestion; qIndex++){
-        progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
-    }
-    console.log('working?')
-}
+
+// function progress(){
+//     for(qIndex = 0; qIndex <= finalQuestion; qIndex++){
+//         progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
+    
+//     }
+//     console.log('working?')
+// }
 
 function beginQuiz() {
     start.style.display = "none";
@@ -73,9 +75,15 @@ function beginQuiz() {
     progress();
     console.log('do you do anything')
 }
-
-
+function setNextQuestion() {
+  if (currentQuestion < finalQuestion) {
+        currentQuestion++;
+    setNextQuestion();
+  }
+     console.log('how do I get this to the next question?')
+     
+ }
 
 
 nextButton.style.display = 'block';
-nextButton.addEventListener('click', progress)
+nextButton.addEventListener('click', setNextQuestion)
