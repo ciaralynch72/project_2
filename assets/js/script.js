@@ -34,6 +34,20 @@ const questions = [
         guessC: 'Nova Scotia',
         guessD: 'Quebec',
         correct: 'B'
+    }, {
+        question: "What is the deepest lake in Canada?",
+        guessA: 'Great Slave Lake',
+        guessB: 'Lake Superior',
+        guessC: 'Morraine Lake',
+        guessD: 'Lake Huron',
+        correct: 'A'
+    }, {
+        question: "How many Canadian cities have hosted the Olympics?",
+        guessA: '1',
+        guessB: '2',
+        guessC: '3',
+        guessD: '4',
+        correct: '3'
     }
 ]
 
