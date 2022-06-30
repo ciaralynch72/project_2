@@ -60,29 +60,28 @@ function displayQuestion() {
     D.innerHTML = q.guessD;
 }
 
- function progress(){
-     for(qIndex = 0; qIndex <= finalQuestion; qIndex++){
-         progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
-  
-     }
-     console.log('working?')
- }
+  function progress(){
+      for(qIndex = 0; qIndex <= finalQuestion; qIndex++){
+          progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
+      }
+      console.log('working?')
+  }
 
 function beginQuiz() {
     start.style.display = "none";
     quiz.style.display = "block";
     displayQuestion();
-    progress();
+    // progress();
     console.log('do you do anything')
 }
-function setNextQuestion() {
-  if (currentQuestion < finalQuestion) {
-        currentQuestion++;
-    setNextQuestion();
-  }
-     console.log('how do I get this to the next question?')
+// function setNextQuestion() {
+//   if (currentQuestion < finalQuestion) {
+//         currentQuestion++;
+//     setNextQuestion();
+//   }
+//      console.log('how do I get this to the next question?')
      
- }
+//  }
 
  function checkAnswer(answer){
     if( answer == questions[currentQuestion].correct){
@@ -105,6 +104,9 @@ function setNextQuestion() {
     }
 }
 
+function answerCorrect() {
+
+}
 
 nextButton.style.display = 'block';
-nextButton.addEventListener('click', setNextQuestion)
+// nextButton.addEventListener('click', setNextQuestion)

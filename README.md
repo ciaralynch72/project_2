@@ -1,5 +1,5 @@
 # Oh, Canada! #
-For my second milestone project I have came up with an idea to create a fun and informative quiz about Canada. Canada is quiet often overshadowed by it's neighbor to the south so I wanted to create a quiz that hightlights what an amazing country Canada is. 
+For my second milestone project I have came up with an idea to create a fun and informative quiz about Canada. Canada is quite often overshadowed by it's neighbor to the south so I wanted to create a quiz that hightlights what an amazing country Canada is. 
 
 
 ### Site owner's goals ###
