@@ -19,7 +19,7 @@ const questions = [
         guessB: 'Glacier National Park, British Columbia',
         guessC: 'Thousand Islands National Park, Ontario',
         guessD: 'Qausuittuq National Park, Nunavat',
-        correct: 'guessA'
+        correct: 'A'
     }, {
         question: "What is a toque?",
         guessA: 'A tool to rake a camp fire ',
@@ -60,13 +60,13 @@ function displayQuestion() {
     D.innerHTML = q.guessD;
 }
 
-// function progress(){
-//     for(qIndex = 0; qIndex <= finalQuestion; qIndex++){
-//         progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
-    
-//     }
-//     console.log('working?')
-// }
+ function progress(){
+     for(qIndex = 0; qIndex <= finalQuestion; qIndex++){
+         progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
+  
+     }
+     console.log('working?')
+ }
 
 function beginQuiz() {
     start.style.display = "none";
@@ -83,6 +83,27 @@ function setNextQuestion() {
      console.log('how do I get this to the next question?')
      
  }
+
+ function checkAnswer(answer){
+    if( answer == questions[currentQuestion].correct){
+        // answer is correct
+
+        // change progress color to green
+        console.log('ANSWER IS CORRECT');
+    }else{
+        // answer is wrong
+        // change progress color to red
+       console.log('answer is incorrect')
+    }
+   
+    if(currentQuestion < finalQuestion){
+        currentQuestion++;
+        displayQuestion();
+    }else{
+        // end the quiz and show the score
+        alert('game is over')
+    }
+}
 
 
 nextButton.style.display = 'block';
