@@ -32,6 +32,13 @@ body {
     padding: 30px;
 }
 
+#image {
+    background: url('../images/free-vector-mount-everest-illustration.jpg') no-repeat center center;
+    object-fit: cover;
+    height: fit-content;
+    overflow: hidden;
+
+} 
 /*Container holding the quiz game*/
 #quiz_grid {
     display: grid;

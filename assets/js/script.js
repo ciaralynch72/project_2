@@ -88,14 +88,13 @@ function beginQuiz() {
     // progress();
     console.log('do you do anything')
 }
-// function setNextQuestion() {
-//   if (currentQuestion < finalQuestion) {
-//         currentQuestion++;
-//     setNextQuestion();
-//   }
-//      console.log('how do I get this to the next question?')
-     
-//  }
+ function setNextQuestion() {
+   if (currentQuestion < finalQuestion) {
+         currentQuestion++;
+     setNextQuestion();
+   }
+      console.log('how do I get this to the next question?')   
+  }
 
  function checkAnswer(answer){
     if( answer == questions[currentQuestion].correct){
